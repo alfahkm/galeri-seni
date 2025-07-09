@@ -1,0 +1,382 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Reset dan dasar styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #fff;
+  color: #1a237e; /* biru tua */
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  user-select: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.box {
+  border: 4px solid #1a237e; /* biru tua */
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(26, 35, 126, 0.7);
+}
+
+.image-box img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.pattern-box.orange {
+  background-color: #ffb300; /* oranye */
+  position: relative;
+}
+
+.pattern-box.purple {
+  background-color: #9fa8da; /* ungu muda */
+  position: relative;
+}
+
+.pattern {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  stroke: #1a237e;
+  stroke-width: 4;
+  fill: #9fa8da;
+}
+
+/* Pola bintang */
+.pattern.star {
+  width: 60px;
+  height: 60px;
+  background: #9fa8da;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  border: 4px solid #1a237e;
+  border-radius: 20%;
+  box-shadow: 0 0 0 4px #1a237e;
+}
+
+/* Pola bunga */
+.pattern.flower {
+  width: 60px;
+  height: 60px;
+  background: #ffb300;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  background-color: #9fa8da;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  border: 4px solid #1a237e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #1a237e;
+}
+
+/* Kotak deskripsi */
+.description-box {
+  border: 4px solid #1a237e;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.4;
+  user-select: none;
+  margin-bottom: 3rem;
+}
+
+/* Dekorasi bunga kecil di bawah */
+.decorations {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.small-flower {
+  width: 40px;
+  height: 40px;
+  background-color: #ff7043; /* oranye kemerahan */
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  border: 4px solid #1a237e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #1a237e;
+  user-select: none;
+}
+
+/* Tombol kembali pojok kiri atas */
+.back-button {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background-color: transparent;
+  color: #1a237e;
+  font-weight: 900;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: none;
+  transition: color 0.3s ease;
+  z-index: 1000;
+}
+
+.back-button:hover {
+  color: #3949ab;
+  text-decoration: none;
+}
+
+/* Ikon panah kiri untuk tombol kembali */
+.back-button::before {
+  content: '←';
+  font-weight: 900;
+  color: #1a237e;
+}
+
+/* Tombol upload custom */
+.upload-button {
+  color: #1a237e;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  user-select: none;
+}
+
+/* Sembunyikan input file asli */
+.file-input {
+  display: none;
+}
+
+/* Responsif */
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .description-box {
+    font-size: 0.9rem;
+  }
+  .small-flower {
+    width: 30px;
+    height: 30px;
+  }
+  .flower-poster-static {
+    border: 4px solid #1a237e; /* biru tua */
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 3rem auto 2rem auto;
+    max-width: 100px;
+    box-shadow: 0 8px 16px rgba(26, 35, 126, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flower-poster-static img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+/* Styling untuk layar lebih besar (desktop/tablet) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+  .title {
+    font-size: 4rem;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .box {
+    border-width: 5px;
+    border-radius: 24px;
+  }
+  .description-box {
+    font-size: 1.2rem;
+    padding: 1.5rem 2rem;
+  }
+  .small-flower {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Animasi slide dari kanan ke kiri untuk perpindahan halaman */
+.fade-enter {
+  opacity: 0;
+  transform: translateX(100%);
+  z-index: 1;
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 300ms, transform 300ms;
+}
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
